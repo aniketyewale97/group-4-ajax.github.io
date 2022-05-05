@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        Display Data
+    </title>
+    <style>
+        table.GeneratedTable {
+          width: 100%;
+          background-color: #ffffff;
+          border-collapse: collapse;
+          border-width: 2px;
+          border-color: #ffcc00;
+          border-style: solid;
+          color: #000000;
+        }
+        
+        table.GeneratedTable td, table.GeneratedTable th {
+          border-width: 2px;
+          border-color: #ffcc00;
+          border-style: solid;
+          padding: 3px;
+        }
+        
+        table.GeneratedTable thead {
+          background-color: #ffcc00;
+        }
+        </style>
+    </head>
+<body>
+ <!--   
+<h1>Username : </h1>
+<script>document.write(localStorage.getItem("name"))</script>
+<h1>Email : </h1>
+<script>document.write(localStorage.getItem("email"))</script>
+<h1>Password : </h1>
+<script>document.write(localStorage.getItem("pass"))</script>
+<h1>Confirm Password : </h1>
+<script>document.write(localStorage.getItem("cpass"))</script>
+ -->
+<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+    
+    <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
+    <table class="GeneratedTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Confirm Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><script>document.write(localStorage.getItem("name"))</script></td>
+          <td><script>document.write(localStorage.getItem("email"))</script></td>
+          <td><script>document.write(localStorage.getItem("pass"))</script></td>
+          <td><script>document.write(localStorage.getItem("cpass"))</script></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Codes by Quackit.com -->
+    
+    
+</body>
+</html>

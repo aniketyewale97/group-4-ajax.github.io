@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      table.GeneratedTable {
+        width: 100%;
+        background-color: #ffffff;
+        border-collapse: collapse;
+        border-width: 2px;
+        border-color: #ffcc00;
+        border-style: solid;
+        color: #000000;
+      }
+      
+      table.GeneratedTable td, table.GeneratedTable th {
+        border-width: 2px;
+        border-color: #ffcc00;
+        border-style: solid;
+        padding: 3px;
+      }
+      
+      table.GeneratedTable thead {
+        background-color: #ffcc00;
+      }
+      </style>
+<title>VINAY AJAX</title>
+</head>
+    <body>
+        <section class="text-gray-600 body-font relative">
+            <div class="container px-5 py-20 mx-auto">
+              <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">VINAY MACHHA A43</h1>
+               <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+               <p class="lg:w-2/3 mx-auto leading-relaxed text-base">A Simple form to work with AJAX POST Method.</p>
+              </div>
+              <form action="#">
+              <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                      <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                      <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <label for="pass" class="leading-7 text-sm text-gray-600">Password</label>
+                      <input type="password" id="pass" name="pass" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-1/2">
+                    <div class="relative">
+                      <label for="cpass" class="leading-7 text-sm text-gray-600">Confirm Password</label>
+                      <input type="password" id="cpass" name="cpass" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                  <div class="p-2 w-full">
+                    <input type="submit" id="sub" name="sub" placeholder="register" onclick="savedata()" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                  </div>
+                  </div>
+                </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <!--
+          <script>
+            function loadDoc() {
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("demo").innerHTML =
+                  this.responseText;
+                }
+              };
+              xhttp.open("GET", "ajax_info.txt", true);
+              xhttp.send();
+            }
+            </script>
+          -->
+          <script>
+          function savedata(){
+          let name,email,pass,cpass;
+          name=document.getElementById("name").value;
+          email=document.getElementById("email").value;
+          pass=document.getElementById("pass").value;
+          cpass=document.getElementById("cpass").value;
+
+          localStorage.setItem("name",name);
+          localStorage.setItem("email",email);
+          localStorage.setItem("pass",pass);
+          localStorage.setItem("cpass",cpass);
+          }
+          </script>
+
+<h1 class="text-center sm:text-3xl text-2xl font-medium title-font mb-3 text-gray-900">DATA PRESENT IN LOCAL STORAGE</h1>
+<table class="GeneratedTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Confirm Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><script>document.write(localStorage.getItem("name"))</script></td>
+      <td><script>document.write(localStorage.getItem("email"))</script></td>
+      <td><script>document.write(localStorage.getItem("pass"))</script></td>
+      <td><script>document.write(localStorage.getItem("cpass"))</script></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
